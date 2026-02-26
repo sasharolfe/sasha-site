@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sasha's Site</title>
+    <meta name="author" content="Sasha Rolfe">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/elevator.css">
+    <link rel="stylesheet" href="styles/panel.css">
+</head>
+<body>
+
+    <div id="app">
+
+        <div id="elevator-area">
+
+            <div id="elevator-wrap">
+
+                <div id="shaft-scroll">
+                    <div id="shaft-inner">
+
+                        <div id="dial-phantom"></div>
+
+                        <div class="section" id="section-5">
+                            <iframe src="floors/mystery.html" class="floor-frame"></iframe>
+                        </div>
+                        <div class="floor-divider"></div>
+
+                        <div class="section" id="section-4">
+                            <iframe src="floors/contact.html" class="floor-frame"></iframe>
+                        </div>
+                        <div class="floor-divider"></div>
+
+                        <div class="section" id="section-3">
+                            <iframe src="floors/projects.html" class="floor-frame"></iframe>
+                        </div>
+                        <div class="floor-divider"></div>
+
+                        <div class="section" id="section-2">
+                            <iframe src="floors/about.html" class="floor-frame"></iframe>
+                        </div>
+                        <div class="floor-divider"></div>
+
+                        <div class="section" id="section-1" style="background-image: url('https://i.pinimg.com/...')">
+                            <iframe src="floors/welcome.html" class="floor-frame"></iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="dial-container">
+                    <div id="dial-glass"></div>
+                </div>
+
+                <div id="elevator-frame">
+                    <div id="gate-layer">
+                        <svg id="svg-gate" xmlns="http://www.w3.org/2000/svg"></svg>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <div id="button-panel">
+            <div id="right-inner">
+
+                <div id="site-title">Sasha's<br>Site</div>
+
+                <div class="floor-btns">
+                    <button class="floor-btn" data-floor="5">
+                        <span class="btn-circle">5</span>
+                        <span class="btn-word gold">Mystery</span>
+                    </button>
+                    <button class="floor-btn" data-floor="4">
+                        <span class="btn-circle">4</span>
+                        <span class="btn-word gold">Contact</span>
+                    </button>
+                    <button class="floor-btn" data-floor="3">
+                        <span class="btn-circle">3</span>
+                        <span class="btn-word gold">Projects</span>
+                    </button>
+                    <button class="floor-btn" data-floor="2">
+                        <span class="btn-circle">2</span>
+                        <span class="btn-word gold">About</span>
+                    </button>
+                    <button class="floor-btn" data-floor="1">
+                        <span class="btn-circle">1</span>
+                        <span class="btn-word gold">Welcome</span>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="scripts/main.js"></script>
+</body>
+</html>

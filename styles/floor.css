@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    font-family:Arial, Helvetica, sans-serif;
+    cursor: url('../assets/cursors/normal.cur'), auto;
+}
+
+body {
+    background-color: #485474;
+    background-size: cover;
+    background-position: center;
+    color: black;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.55;
+    mix-blend-mode: overlay;
+}
+
+a {
+    cursor: url('../assets/cursors/hand.cur'), auto;
+}
+
+.floor-page {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.floor-topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 28px 48px;
+    border-bottom: 1px solid rgba(17, 17, 17, 0.15);
+}
+
+.floor-label {
+    font-size: 0.75rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    opacity: 0.5;
+}
+
+.floor-content {
+    flex: 1;
+    padding: 80px 48px;
+    max-width: 860px;
+}
+
+.floor-title {
+    font-size: clamp(2.8rem, 6vw, 5rem);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-bottom: 32px;
+}
+
+.floor-title em {
+    font-style: italic;
+}
+
+.floor-body {
+    font-size: 1.1rem;
+    line-height: 1.75;
+    max-width: 560px;
+}
