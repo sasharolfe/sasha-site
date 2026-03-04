@@ -1,5 +1,5 @@
-import { init } from './elevator.js';
+import { init } from "./elevator.js";
 
-document.addEventListener('DOMContentLoaded', () => {
-    init();
+document.addEventListener("DOMContentLoaded", () => {
+  init();
 });

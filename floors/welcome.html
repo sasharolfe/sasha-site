@@ -1,28 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Welcome — Sasha's Site</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="stylesheet" href="../../styles/floor.css">
-</head>
-<body>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="../../styles/floor.css" />
+    <style>
+      body {
+        background-image: url("https://i.pinimg.com/1200x/e8/44/a6/e844a6929280e00567095ef1dd41f216.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+      .floor-content {
+        background-color: rgba(251, 93, 72, 0.15);
+      }
+      .floor-body {
+        background-color: rgba(255, 255, 255, 0.5);
+      }
+    </style>
+  </head>
+  <body>
     <div class="floor-page">
+      <header class="floor-topbar"></header>
 
-        <header class="floor-topbar">
-        </header>
-    
-        <main class="floor-content">
-            <h1 class="floor-title">Welcome</h1>
-            <div class="floor-body">
-                <p>Welcome to my website! </p>
-                <p>To see stuff, either scroll up on this elevator shaft, or press a button to select a specific floor.</p>
-            </div>
-        </main>
-
+      <main class="floor-content">
+        <h1 class="floor-title">Welcome</h1>
+        <div class="floor-body">
+          <p>Welcome to my website!</p>
+          <p>
+            To navigate, either scroll up on this elevator shaft, or press a
+            button to select a specific floor.
+          </p>
+        </div>
+      </main>
     </div>
-
-</body>
+  </body>
 </html>
