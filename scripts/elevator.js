@@ -1,4 +1,5 @@
 import { drawGate, animateGate, gateProgress } from './gate.js';
+import { buildDial, setDialNeedle, floorToDeg } from './dial.js';
 
 export const FLOORS = [
     {id: 1, label: 'Welcome'},
@@ -74,6 +75,7 @@ export async function navigate(floor) {
 
     await animateGate(0, GATE_CLOSE_MS);
     await scrollToFloor(floor);
+    setDialNeedle(floorToDeg(floor));
     await animateGate(GATE_MAX_OPEN_PERCENT, GATE_OPEN_MS);
 
     travelFloor = null;
@@ -95,6 +97,7 @@ if (shaftScroll) {
 
         const frac = shaftScroll.scrollTop / maxScroll;
         const fracFloor = TOTAL - frac * (TOTAL - 1);
+        setDialNeedle(floorToDeg(fracFloor)); // was floorToDeg(floor) — undefined variable
 
         const nearest = Math.round(Math.max(1, Math.min(TOTAL, fracFloor)));
         if (nearest !== currentFloor) {
@@ -106,14 +109,18 @@ if (shaftScroll) {
 
 export function init() {
     syncSectionHeights();
+    buildDial();
     drawGate(GATE_MAX_OPEN_PERCENT);
     const bottom = Math.max(0, shaftScroll.scrollHeight - shaftScroll.clientHeight);
     shaftScroll.scrollTop = bottom;
     renderButtons();
+    setDialNeedle(floorToDeg(1));
 }
 
 window.addEventListener('resize', () => {
     syncSectionHeights();
+    buildDial();
     if (shaftScroll) shaftScroll.scrollTop = getScrollTopForFloor(currentFloor);
+    setDialNeedle(floorToDeg(currentFloor));
     drawGate(gateProgress);
 });
