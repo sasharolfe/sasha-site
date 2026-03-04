@@ -12,7 +12,7 @@ body {
 }
 
 body {
-  background-color: #485474;
+  background-color: white;
   background-size: cover;
   background-position: center;
   color: black;
@@ -58,14 +58,12 @@ a {
   line-height: 1.05;
   letter-spacing: -0.02em;
   margin-bottom: 32px;
-}
-
-.floor-title em {
-  font-style: italic;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .floor-body {
   font-size: 1.1rem;
-  line-height: 1.75;
+  line-height: 1.2;
   max-width: 560px;
+  background-color: rgba(255, 255, 255, 0.5);
 }
