@@ -20,7 +20,7 @@ export function drawGate(progress) {
   const spacing = maxSpacing * (1 - progress);
   const bars = Array.from(
     { length: NUM_BARS },
-    (_, i) => W - i * spacing - BAR_W / 2
+    (_, i) => W - i * spacing - BAR_W / 2 + 0.1
   );
 
   const armLen = maxSpacing * 1.3;
